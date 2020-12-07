@@ -13,4 +13,34 @@ git status  查看版本库文件状态
 git add 文件名  添加文件到版本管理，同时加入暂存区
 git commit -m '备注：第一次提交'  把暂存区的文件提交到版本库
 git log 查看提交记录
-git checkout 文件名 拿暂存区但未提交的文件覆盖掉未在暂存区的相同文件
+git checkout 文件名 拿暂存区但未提交的文件覆盖掉未在暂存区的相同文件(暂存区覆盖工作区)
+git rm --cached 文件名  将文件从暂存区中删除
+git reset --hard commitID   从版本库里恢复文件，把暂存区和工作区都覆盖
+    commitID : 提交的ID      通过git.log查看提交ID
+
+新建的步骤：
+    工作区 --> 暂存区 --> 版本库
+    git init-->git add-->git commit -m
+
+回退：
+    git checkout 文件名 暂存区覆盖工作区
+    git rm --cached 文件名 删除暂存区的文件
+    git reset --hard commitID   回退到指定的历史记录
+
+删除:
+    git rm 文件名   删除文件
+
+分支：
+master    主分支
+release     测试版本
+develop     开发版本
+feature     功能版本
+
+git branch  查看分支列表
+git branch release  创建一个分支
+git checkout release    切换分支
+git merge feature   合并分支
+git branch -d(-D强制删除) 分支名称  删除分支
+
+git stash   隐藏临时修改（用于修改的代码只在特定的分支下有效）
+git stash pop   回复隐藏的临时修改（在其他分支修改完后再恢复回来）

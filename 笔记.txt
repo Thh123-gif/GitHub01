@@ -11,6 +11,7 @@ git config --global user.email  配置邮箱
 git init    初始化空的git仓库(文件路径后面会有一个默认的master主分支)
 git status  查看版本库文件状态
 git add 文件名  添加文件到版本管理，同时加入暂存区
+git add .   添加所有文件到暂存区
 git commit -m '备注：第一次提交'  把暂存区的文件提交到版本库
 git log 查看提交记录
 git checkout 文件名 拿暂存区但未提交的文件覆盖掉未在暂存区的相同文件(暂存区覆盖工作区)
@@ -44,3 +45,7 @@ git branch -d(-D强制删除) 分支名称  删除分支
 
 git stash   隐藏临时修改（用于修改的代码只在特定的分支下有效）
 git stash pop   回复隐藏的临时修改（在其他分支修改完后再恢复回来）
+
+连接远程仓库:
+git remote add origin 网址  在网址新建项目中复制
+git push origin 分支名称    添加文件到远程仓库上

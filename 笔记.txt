@@ -1,0 +1,16 @@
+Git 是一个版本管理控制系统
+
+Git的命令：
+git config --list   查看配置列表
+git config --global user.name   配置用户名
+git config --global user.email  配置邮箱
+
+工作区  暂存区  版本库
+
+代码版本管理：
+git init    初始化空的git仓库(文件路径后面会有一个默认的master主分支)
+git status  查看版本库文件状态
+git add 文件名  添加文件到版本管理，同时加入暂存区
+git commit -m '备注：第一次提交'  把暂存区的文件提交到版本库
+git log 查看提交记录
+git checkout 文件名 拿暂存区但未提交的文件覆盖掉未在暂存区的相同文件
